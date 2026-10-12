@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="../index.html?view=portal" aria-label="Return to main portal"><span class="brand-mark">C</span><span>Campus<span class="brand-light">Connect</span></span></a>
+    <div class="profile-mini">
+      <div class="avatar">ST</div>
+      <div><strong>Student Portal</strong><small>Student account</small></div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a class="nav-link active" href="#overview"><span>▦</span> Overview</a>
+      <a class="nav-link" href="#courses"><span>▤</span> My Courses</a>
+      <a class="nav-link" href="#events"><span>◷</span> Events</a>
+      <a class="nav-link" href="#announcements"><span>▣</span> Announcements</a>
+      <a class="nav-link" href="#profile"><span>♙</span> My Profile</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="help-card"><strong>Need help?</strong><p>Contact your campus support team for assistance.</p><a href="mailto:support@example.com">Contact support ↗</a></div>
+      <button class="logout" id="logoutBtn" type="button">↪ <span>Log out</span></button>
+    </div>
+  </aside>
+
+  <main class="main-content" id="overview">
+    <header class="topbar">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      <div class="breadcrumb"><a href="../index.html?view=portal">Main portal</a> <span>/</span> <strong>Student Dashboard</strong></div>
+      <div class="top-actions"><span class="status-dot"></span><span class="online-label">Student view</span><div class="avatar small">ST</div></div>
+    </header>
+
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">MONDAY, YOUR CAMPUS AT A GLANCE</p>
+        <h1>Welcome back, <span id="studentName">Student</span> 👋</h1>
+        <p class="muted">Here’s what’s happening with your studies today.</p>
+      </div>
+      <div class="welcome-art" aria-hidden="true"><div class="sun"></div><div class="book book-one"></div><div class="book book-two"></div><div class="plant">♧</div></div>
+    </section>
+
+    <section class="stats-grid" aria-label="Student summary">
+      <article class="stat-card"><div class="stat-icon purple">▤</div><div class="stat-label">Enrolled courses</div><div class="stat-value">4</div><div class="stat-note">Your current semester</div></article>
+      <article class="stat-card"><div class="stat-icon blue">◷</div><div class="stat-label">Upcoming events</div><div class="stat-value">3</div><div class="stat-note">Don't miss what's next</div></article>
+      <article class="stat-card"><div class="stat-icon green">✓</div><div class="stat-label">Attendance</div><div class="stat-value">92<span class="percent">%</span></div><div class="progress"><span style="width:92%"></span></div></article>
+      <article class="stat-card"><div class="stat-icon orange">☆</div><div class="stat-label">Tasks completed</div><div class="stat-value">12<span class="out-of">/ 15</span></div><div class="progress orange-progress"><span style="width:80%"></span></div></article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel courses-panel" id="courses">
+        <div class="panel-heading"><div><h2>My Courses</h2><p class="muted">Your learning this semester</p></div><a class="text-link" href="#courses">View all →</a></div>
+        <div class="course-list">
+          <div class="course-row"><div class="course-icon lavender">CS</div><div class="course-info"><strong>Introduction to Programming</strong><span>CS101 · Prof. Anderson</span><div class="mini-progress"><span style="width:72%"></span></div></div><b>72%</b></div>
+          <div class="course-row"><div class="course-icon mint">DB</div><div class="course-info"><strong>Database Systems</strong><span>CS204 · Prof. Chen</span><div class="mini-progress"><span style="width:58%"></span></div></div><b>58%</b></div>
+          <div class="course-row"><div class="course-icon peach">UX</div><div class="course-info"><strong>UI/UX Fundamentals</strong><span>DES110 · Prof. Rivera</span><div class="mini-progress"><span style="width:86%"></span></div></div><b>86%</b></div>
+        </div>
+      </article>
+
+      <article class="panel events-panel" id="events">
+        <div class="panel-heading"><div><h2>Upcoming Events</h2><p class="muted">Save the date</p></div><a class="text-link" href="#events">See all →</a></div>
+        <div class="event-row"><div class="date-tile"><strong>18</strong><span>OCT</span></div><div><strong>Campus Tech Meetup</strong><p>10:00 AM · Innovation Hall</p></div></div>
+        <div class="event-row"><div class="date-tile blue-date"><strong>22</strong><span>OCT</span></div><div><strong>Design Workshop</strong><p>2:30 PM · Studio 2</p></div></div>
+        <div class="event-row"><div class="date-tile green-date"><strong>26</strong><span>OCT</span></div><div><strong>Career Guidance</strong><p>11:00 AM · Main Auditorium</p></div></div>
+      </article>
+    </section>
+
+    <section class="content-grid lower-grid">
+      <article class="panel announcements-panel" id="announcements">
+        <div class="panel-heading"><div><h2>Announcements</h2><p class="muted">Latest campus updates</p></div><span class="new-pill">3 new</span></div>
+        <div class="announcement"><span class="announcement-dot"></span><div><strong>Registration is open</strong><p>Course registration for the next term is now available.</p><small>Today · Academic Office</small></div></div>
+        <div class="announcement"><span class="announcement-dot blue-dot"></span><div><strong>Library hours extended</strong><p>The library will stay open until 9 PM this week.</p><small>Yesterday · Library Team</small></div></div>
+        <div class="announcement"><span class="announcement-dot orange-dot"></span><div><strong>Student club fair</strong><p>Explore clubs and meet student communities this Friday.</p><small>2 days ago · Student Affairs</small></div></div>
+      </article>
+      <article class="panel profile-panel" id="profile">
+        <div class="panel-heading"><div><h2>My Profile</h2><p class="muted">Your account details</p></div><span class="role-badge">STUDENT</span></div>
+        <div class="profile-large"><div class="avatar profile-avatar">ST</div><div><strong id="profileName">Student</strong><p>Student account</p></div></div>
+        <div class="detail-row"><span>Role</span><strong>student</strong></div>
+        <div class="detail-row"><span>Student ID</span><strong>Not added</strong></div>
+        <div class="detail-row"><span>Department</span><strong>Not added</strong></div>
+        <button class="primary-btn" id="editProfileBtn" type="button">Edit display name</button>
+      </article>
+    </section>
+    <footer>© 2026 CampusConnect · Student Dashboard <span><a href="../index.html?view=portal">Return to main portal</a></span></footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module">
+    import { supabase, isSupabaseConfigured } from '../assets/js/supabase-client.js';
+
+    const toast = (message) => {
+      const el = document.getElementById('toast');
+      el.textContent = message;
+      el.classList.add('show');
+      window.clearTimeout(window.toastTimer);
+      window.toastTimer = window.setTimeout(() => el.classList.remove('show'), 2800);
+    };
+
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      document.body.classList.toggle('sidebar-open');
+    });
+    document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => {
+      document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active'));
+      link.classList.add('active');
+      document.body.classList.remove('sidebar-open');
+    }));
+
+    async function loadStudent() {
+      if (!isSupabaseConfigured()) {
+        toast('Supabase is not configured. Check assets/js/config.js.');
+        return;
+      }
+      const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
+      if (sessionError || !sessionData.session?.user) {
+        window.location.replace('../index.html');
+        return;
+      }
+      const user = sessionData.session.user;
+      const { data: profile, error } = await supabase
+        .from('profiles')
+        .select('full_name, role, student_id, department')
+        .eq('id', user.id)
+        .maybeSingle();
+      if (error) {
+        toast('Could not load your profile. Check the profiles SELECT policy.');
+        console.error(error);
+        return;
+      }
+      if (!profile || profile.role !== 'student') {
+        toast('This account does not have the student role.');
+        window.setTimeout(() => window.location.replace('../index.html?view=portal'), 1400);
+        return;
+      }
+      const name = profile.full_name || user.email || 'Student';
+      document.getElementById('studentName').textContent = name;
+      document.getElementById('profileName').textContent = name;
+      document.querySelector('.profile-mini strong').textContent = name;
+      document.querySelector('.profile-mini small').textContent = user.email || 'Student account';
+      const initials = name.split(/\s+/).filter(Boolean).slice(0, 2).map(part => part[0]).join('').toUpperCase() || 'ST';
+      document.querySelectorAll('.avatar').forEach(el => { el.textContent = initials; });
+      const details = document.querySelectorAll('.profile-panel .detail-row strong');
+      if (details[1]) details[1].textContent = profile.student_id || 'Not added';
+      if (details[2]) details[2].textContent = profile.department || 'Not added';
+    }
+
+    document.getElementById('editProfileBtn').addEventListener('click', () => {
+      toast('Display-name editing is a demo action. Update full_name in your profiles table to change the saved name.');
+    });
+    document.getElementById('logoutBtn').addEventListener('click', async () => {
+      const button = document.getElementById('logoutBtn');
+      button.disabled = true;
+      if (!isSupabaseConfigured()) {
+        window.location.replace('../index.html');
+        return;
+      }
+      const { error } = await supabase.auth.signOut();
+      if (error) {
+        button.disabled = false;
+        toast('Could not sign out. Please try again.');
+        console.error(error);
+        return;
+      }
+      window.location.replace('../index.html');
+    });
+
+    loadStudent().catch(error => {
+      console.error(error);
+      toast('Could not load dashboard. Please sign in again.');
+    });
+  </script>
+</body>
+</html>
